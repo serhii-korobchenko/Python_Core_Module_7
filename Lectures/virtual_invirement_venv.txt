@@ -1,0 +1,17 @@
+Creation:
+python -m venv /path/to/new/virtual/environment
+or
+venv /path/to/new/virtual/environment
+
+Example: python -m venv D:\PYTHON\virtual_enviroment
+
+Activation:
+ \path\to\new\virtual\environment\Scripts\Activate.bat
+
+Example: D:\PYTHON\virtual_enviroment\Scripts\activate.bat
+
+Deactivation:
+ \path\to\new\virtual\environment\Scripts\deactivate.bat
+
+Example: D:\PYTHON\virtual_enviroment\Scripts\deactivate.bat
+
