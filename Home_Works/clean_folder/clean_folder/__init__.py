@@ -1,4 +1,4 @@
-from clean_folder.clean_folder.clean import search_function
+from clean_folder.clean import search_function
 
 
-__all__ = ['clean-folder']
+__all__ = ['search_function']
