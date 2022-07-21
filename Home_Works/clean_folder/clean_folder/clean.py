@@ -30,7 +30,7 @@ for c, l in zip(CYRILLIC_SYMBOLS, TRANSLATION):
 
 #DEF#################################################
 
-def search_function (path, k_space = 0):   
+def search_function (path = Path(sys.argv[1]), k_space = 0):   
     """ Function scan intendent folder at all levels of nestiness and find files and 
     folders with defined extensions.
 
@@ -270,15 +270,17 @@ def process_archives (path):
     os.remove(dest_pass)
 
 #MAIN_BODY########################################
+
+
 print('LOG:')
 #print(f'Target folder is: {p}.')
     
 with open('report.txt', 'w') as report:
-        
+            
     if sys.argv[1]:
         p = Path(sys.argv[1])
         print(f'Target folder is: {p}.')
-        
+            
         report.write('File structure processing:' + '\n\n')
         search_function (p, 0)
         report.write('\n\n\n')
@@ -297,3 +299,4 @@ set_prep_for_write (set_unfam_extension)
 
 
 # python D:\PYTHON\Python_Core_Module_7\Home_Works\clean_folder\clean_folder\clean.py D:\TEST\Garbage
+# Clean-folder D:\TEST\Garbage

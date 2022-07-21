@@ -1,0 +1,84 @@
+File structure processing:
+
+    09_12_2019.xls                                                                                       File      
+    archives                                                                                             Folder    
+       fake_project                                                                                         Folder    
+          .projectignore                                                                                       File      
+          anaconda_project.yml                                                                                 File      
+    audio                                                                                                Folder    
+       Svedenie_Semen_Lilya.wav                                                                             File      
+       videoplayback__online_audio_converter.com_.mp3                                                       File      
+    documents                                                                                            Folder    
+       Alfa_corespondence.docx                                                                              File      
+       Alpha_Now__web__Terms_of_Use_August_2021__1_.docx                                                    File      
+       Golf_STO.docx                                                                                        File      
+       Kerivnitstvo_Alpha_Now_Eng.docx                                                                      File      
+       Kerivnitstvo_Alpha_Now_rus.docx                                                                      File      
+       python_book_3.pdf                                                                                    File      
+       Review_Module_4_5_Serhii.pptx                                                                        File      
+       test.txt                                                                                             File      
+       TOU_Webapp___Alpha_Now_Platform_currentt__Ukranian_.docx                                             File      
+       TOU_Webapp___Alpha_Now_Platform_currentt__Ukranian__Living_Words_Church.docx                         File      
+       ZU_2711.doc                                                                                          File      
+       __rivnitstvo_Alpha_Now_Eng.docx                                                                      File      
+    images                                                                                               Folder    
+       JTS.jpeg                                                                                             File      
+       Kombinatorika.jpg                                                                                    File      
+    tezi_2020_SHvets.bmp                                                                                 File      
+    video                                                                                                Folder    
+       Semen_and_Lilia.mov                                                                                  File      
+
+
+
+['set_files_images']: 
+Kombinatorika.jpg
+JTS.jpeg
+
+
+['set_files_documents']: 
+Alfa_corespondence.docx
+Alpha_Now__web__Terms_of_Use_August_2021__1_.docx
+test.txt
+TOU_Webapp___Alpha_Now_Platform_currentt__Ukranian_.docx
+Kerivnitstvo_Alpha_Now_Eng.docx
+Golf_STO.docx
+python_book_3.pdf
+Review_Module_4_5_Serhii.pptx
+Kerivnitstvo_Alpha_Now_rus.docx
+TOU_Webapp___Alpha_Now_Platform_currentt__Ukranian__Living_Words_Church.docx
+ZU_2711.doc
+__rivnitstvo_Alpha_Now_Eng.docx
+
+
+['set_files_audio']: 
+videoplayback__online_audio_converter.com_.mp3
+Svedenie_Semen_Lilya.wav
+
+
+['set_files_video']: 
+Semen_and_Lilia.mov
+
+
+['set_files_archives']: 
+
+
+['set_fam_extension']: 
+.docx
+.pdf
+.wav
+.jpeg
+.doc
+.pptx
+.mov
+.txt
+.mp3
+.jpg
+
+
+['set_unfam_extension']: 
+
+.bmp
+.xls
+.yml
+
+
