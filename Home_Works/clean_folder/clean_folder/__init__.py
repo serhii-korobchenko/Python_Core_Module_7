@@ -1,4 +1,4 @@
-from clean_folder import clean
+from clean_folder.clean import start
 
 
-#__all__ = ['search_function']
+__all__ = ['start']

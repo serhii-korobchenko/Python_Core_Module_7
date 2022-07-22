@@ -31,23 +31,23 @@ File structure processing:
 
 
 ['set_files_images']: 
-JTS.jpeg
 Kombinatorika.jpg
+JTS.jpeg
 
 
 ['set_files_documents']: 
-Alfa_corespondence.docx
-ZU_2711.doc
-Kerivnitstvo_Alpha_Now_Eng.docx
-test.txt
-TOU_Webapp___Alpha_Now_Platform_currentt__Ukranian__Living_Words_Church.docx
-Golf_STO.docx
-Review_Module_4_5_Serhii.pptx
-python_book_3.pdf
-Kerivnitstvo_Alpha_Now_rus.docx
 __rivnitstvo_Alpha_Now_Eng.docx
+test.txt
 Alpha_Now__web__Terms_of_Use_August_2021__1_.docx
+TOU_Webapp___Alpha_Now_Platform_currentt__Ukranian__Living_Words_Church.docx
+Alfa_corespondence.docx
+Kerivnitstvo_Alpha_Now_rus.docx
+Kerivnitstvo_Alpha_Now_Eng.docx
 TOU_Webapp___Alpha_Now_Platform_currentt__Ukranian_.docx
+ZU_2711.doc
+Review_Module_4_5_Serhii.pptx
+Golf_STO.docx
+python_book_3.pdf
 
 
 ['set_files_audio']: 
@@ -63,16 +63,16 @@ Semen_and_Lilia.mov
 
 
 ['set_fam_extension']: 
+.txt
+.jpg
 .pptx
 .jpeg
-.txt
-.doc
 .wav
-.jpg
-.pdf
-.mov
-.mp3
 .docx
+.pdf
+.doc
+.mp3
+.mov
 
 
 ['set_unfam_extension']: 

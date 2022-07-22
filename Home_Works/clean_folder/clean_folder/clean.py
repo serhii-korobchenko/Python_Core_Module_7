@@ -30,7 +30,7 @@ for c, l in zip(CYRILLIC_SYMBOLS, TRANSLATION):
 
 #DEF#################################################
 
-def search_function (path = Path(sys.argv[1]), k_space = 0):   
+def search_function (path, k_space, report):   
     """ Function scan intendent folder at all levels of nestiness and find files and 
     folders with defined extensions.
 
@@ -55,7 +55,7 @@ def search_function (path = Path(sys.argv[1]), k_space = 0):
                 ### All our activities with folders
 
                 path = Path.joinpath(path, i)
-                search_function (path, k_space) # recursive case
+                search_function (path, k_space, report) # recursive case
                 
                 # Delete empty folders or rename it
                 if len(os.listdir(i)) == 0: 
@@ -132,7 +132,7 @@ def search_function (path = Path(sys.argv[1]), k_space = 0):
 
     k_space -= 1
     
-    return k_space, set_files_images, set_files_documents, set_files_audio, set_files_video, set_files_archives
+    return k_space, set_files_images, set_files_documents, set_files_audio, set_files_video, set_files_archives, report
 
 def namestr(obj, namespace):
     """ Function return name of veriable in string"""
@@ -176,7 +176,7 @@ def process_pictures (path):
     
     #print ('In Path >>>>', path)
     # Make dir if it does not exist yet
-    path_base = Path.joinpath(p, 'images')
+    path_base = Path.joinpath(Path(sys.argv[1]), 'images')
 
     isExist = os.path.exists(path_base) # Check whether the specified path exists or not
 
@@ -195,7 +195,7 @@ def process_video (path):
     """ Function process video category"""
         
     # Make dir if it does not exist yet
-    path_base = Path.joinpath(p, 'video')
+    path_base = Path.joinpath(Path(sys.argv[1]), 'video')
     
     isExist = os.path.exists(path_base) # Check whether the specified path exists or not
 
@@ -214,7 +214,7 @@ def process_documents (path):
     """ Function process documents category"""
     
     # Make dir if it does not exist yet
-    path_base = Path.joinpath(p, 'documents')
+    path_base = Path.joinpath(Path(sys.argv[1]), 'documents')
     
     isExist = os.path.exists(path_base) # Check whether the specified path exists or not
 
@@ -233,7 +233,7 @@ def process_audio (path):
     """ Function process music category"""
     
     # Make dir if it does not exist yet
-    path_base = Path.joinpath(p, 'audio')
+    path_base = Path.joinpath(Path(sys.argv[1]), 'audio')
     
     isExist = os.path.exists(path_base) # Check whether the specified path exists or not
 
@@ -252,7 +252,7 @@ def process_archives (path):
     """ Function process archives category"""
     
     # Make dir if it does not exist yet
-    path_base = Path.joinpath(p, 'archives')
+    path_base = Path.joinpath(Path(sys.argv[1]), 'archives')
     
     isExist = os.path.exists(path_base) # Check whether the specified path exists or not
 
@@ -271,28 +271,35 @@ def process_archives (path):
 
 #MAIN_BODY########################################
 
+def start():
 
-print('LOG:')
-#print(f'Target folder is: {p}.')
-    
-with open('report.txt', 'w') as report:
-            
-    if sys.argv[1]:
-        p = Path(sys.argv[1])
-        print(f'Target folder is: {p}.')
-            
-        report.write('File structure processing:' + '\n\n')
-        search_function (p, 0)
-        report.write('\n\n\n')
 
-print (f'You could read report file (report.txt) in your current directory')
-set_prep_for_write (set_files_images)
-set_prep_for_write (set_files_documents)
-set_prep_for_write (set_files_audio)
-set_prep_for_write (set_files_video)
-set_prep_for_write (set_files_archives)
-set_prep_for_write (set_fam_extension)
-set_prep_for_write (set_unfam_extension)
+    print('LOG:')
+    #print(f'Target folder is: {p}.')
+            
+    with open('report.txt', 'w') as report:
+                    
+        if sys.argv[1]:
+            p = Path(sys.argv[1])
+            print(f'Target folder is: {p}.')
+                    
+            report.write('File structure processing:' + '\n\n')
+            search_function (p, 0, report)
+            report.write('\n\n\n')
+
+    print (f'You could read report file (report.txt) in your current directory')
+    set_prep_for_write (set_files_images)
+    set_prep_for_write (set_files_documents)
+    set_prep_for_write (set_files_audio)
+    set_prep_for_write (set_files_video)
+    set_prep_for_write (set_files_archives)
+    set_prep_for_write (set_fam_extension)
+    set_prep_for_write (set_unfam_extension)
+
+   
+
+if __name__ == '__main__':
+    start()
     
     
 
